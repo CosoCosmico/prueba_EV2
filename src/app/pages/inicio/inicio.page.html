@@ -9,8 +9,10 @@
   <ion-list>
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
     <ion-card-header>
-      <ion-card-title>{{producto.titulo}}| Categoria: <h4>{{producto.categoria}} </h4>| <h4>Rating:{{producto.rating}}</h4></ion-card-title>
-    <ion-card-subtitle>{{producto.precio}} tiene un descuento de <h2>{{producto.descuento}}</h2></ion-card-subtitle>
+      <ion-card-title><h4>Titulo: {{producto.titulo}}</h4></ion-card-title>
+      <ion-card-title><h4>Categoria: {{producto.categoria}} </h4></ion-card-title>
+      <ion-card-title><h4>Rating: {{producto.rating}}</h4></ion-card-title>
+    <ion-card-title><h2>${{producto.precio}} tiene un descuento de %{{producto.descuento}}</h2></ion-card-title>
    </ion-card-header>
    <ion-card-content>
     <ion-label>{{producto.descripcion}}</ion-label>

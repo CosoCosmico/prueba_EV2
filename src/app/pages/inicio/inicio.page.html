@@ -1,8 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu contenido</ion-title>
+    </ion-toolbar>
+    <ion-button class="ion-padding" [routerLink]="(['/crear-producto'])">Crear producto</ion-button>
+  </ion-header>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
 
 <ion-content>
 <ion-card *ngFor="let producto of producto">
@@ -20,3 +35,4 @@
   </ion-list>
 </ion-card>
 </ion-content>
+</div>

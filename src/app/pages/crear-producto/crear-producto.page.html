@@ -1,11 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>crear-producto</ion-title>
+    <ion-button [routerLink]="([''])">Volver</ion-button>
+    <ion-title>crear producto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card [formGroup]="productoForm" (ngSubmit)="onSumbit()">
+<ion-card [formGroup]="productoForm" (ngSubmit)="onSubmit()">
   <ion-item>
     <ion-label>Titulo:</ion-label>
     <input formControlName="titulo" type="text" required>
@@ -34,16 +35,15 @@
     <ion-label>Brand:</ion-label>
     <input formControlName="brand" type="text" required>
   </ion-item>
-  <ion-item>
+  <ion-item >
     <ion-segment *ngFor="let cat of categoria" [value]="cat">
-      <ion-segment-button>{{cat}}</ion-segment-button>
+      <ion-segment-button value="default">{{cat}}</ion-segment-button>
     </ion-segment>
   </ion-item>
-  <ion-footer>
   <ion-row>
     <ion-button type="submit">Guardar</ion-button>
   </ion-row>
-  </ion-footer>
+
 </ion-card>
 
 </ion-content>

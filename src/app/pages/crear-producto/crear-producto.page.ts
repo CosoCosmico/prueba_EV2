@@ -14,9 +14,8 @@ export class CrearProductoPage implements OnInit {
   categoria =[
     "electonica",
     "artesania",
-    "jardineria",
-    "hogar"
-  ]
+    "jardineria"
+  ];
   constructor
   (
     private builder: FormBuilder,
@@ -38,14 +37,15 @@ export class CrearProductoPage implements OnInit {
   ngOnInit() {
   }
 
-  onSumbit(){
+
+  onSubmit(){
     if(!this.productoForm.valid){return false;}else{
       this.api.crearProducto(this.id).subscribe((Response)=>{
         this.zone.run(()=>{
           this.productoForm.reset();
           this.router.navigate([''])
-        })
-      })
+        });
+      });
     }
   }
 

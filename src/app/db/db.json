@@ -1,0 +1,13 @@
+{
+  "producto" : [{
+    "id": 1,
+    "titulo": "teclado",
+    "descripcion": "aa",
+    "precio": 12000,
+    "descuento": 12,
+    "rating": 2,
+    "stock": 4,
+    "brand": "A",
+    "categoria": "teclado"
+  }]
+}

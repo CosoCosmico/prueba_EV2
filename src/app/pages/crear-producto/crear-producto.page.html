@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crear-producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card [formGroup]="productoForm" (ngSubmit)="onSumbit()">
+  <ion-item>
+    <ion-label>Titulo:</ion-label>
+    <input formControlName="titulo" type="text" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descripcion:</ion-label>
+    <input formControlName="descripcion" type="text" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Precio:</ion-label>
+    <input formControlName="precio" type="number" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descuento:</ion-label>
+    <input formControlName="descuento" type="number" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Rating:</ion-label>
+    <input formControlName="rating" type="number" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Stock:</ion-label>
+    <input formControlName="stock" type="number" required>
+  </ion-item>
+  <ion-item>
+    <ion-label>Brand:</ion-label>
+    <input formControlName="brand" type="text" required>
+  </ion-item>
+  <ion-item>
+    <ion-segment *ngFor="let cat of categoria" [value]="cat">
+      <ion-segment-button>{{cat}}</ion-segment-button>
+    </ion-segment>
+  </ion-item>
+</ion-card>
+</ion-content>

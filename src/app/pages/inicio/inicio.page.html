@@ -5,5 +5,16 @@
 </ion-header>
 
 <ion-content>
-
+<ion-card *ngFor="let producto of producto">
+  <ion-list>
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title>{{producto.titulo}}| Categoria: <h4>{{producto.categoria}} </h4>| <h4>Rating:{{producto.rating}}</h4></ion-card-title>
+    <ion-card-subtitle>{{producto.precio}} tiene un descuento de <h2>{{producto.descuento}}</h2></ion-card-subtitle>
+   </ion-card-header>
+   <ion-card-content>
+    <ion-label>{{producto.descripcion}}</ion-label>
+  </ion-card-content>
+  </ion-list>
+</ion-card>
 </ion-content>
